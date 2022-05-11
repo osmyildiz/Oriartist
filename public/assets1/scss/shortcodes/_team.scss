@@ -1,0 +1,43 @@
+.team{
+  .vertical-item.content-padding .item-content{
+    padding: 40px 20px 41px;
+  }
+  .item-content{
+    background-color: #000000;
+    .tile{
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+    p{
+      font-size: 12px;
+      font-family: 'Vidaloka', serif;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 21px;
+      &.social-icons{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .content-heading{
+    margin-top: 32px;
+    margin-bottom: 17px;
+    font-size: 30px;
+  }
+  .entry-title{
+    font-size: 40px;
+    margin-bottom: 19px
+  }
+  .feature-list{
+    margin-top: 26px;
+    padding-left: 0;
+    li{
+      a{
+        color: $colorMain;
+        &:hover{
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}

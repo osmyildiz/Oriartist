@@ -1,0 +1,13 @@
+.widget_instagram {
+  margin-bottom: -10px;
+  .photo {
+    display: inline-block;
+    width: 33.33%;
+    margin: 0;
+    padding: 5px;
+    img{
+      max-width: 100%;
+    }
+  }
+
+}

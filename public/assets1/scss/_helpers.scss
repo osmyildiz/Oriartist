@@ -1,0 +1,163 @@
+/*
+** Helper Utilities
+*/
+@import 'helpers/helpers_layout';
+@import 'helpers/helpers_colors';
+@import 'helpers/helpers_spacing';
+
+.h-1{
+  line-height: 1;
+}
+
+.hidden-below-xxl{
+  display: none;
+  @media (min-width: 1440px) {
+    display: block;
+  }
+}
+
+.z-6{
+  z-index: 6;
+}
+.z-7-before{
+  &::before{
+    z-index: 7;
+  }
+}
+
+.contact-title{
+  @media (max-width: 768px) {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+}
+
+.transparent-bg{
+  background: transparent;
+}
+
+.border-rad-5{
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.font-main{
+  font-family: 'Vidaloka', serif;
+}
+
+.ds .big-title{
+  font-size: 120px;
+  line-height: 120px;
+  color: $colorMain;
+  font-family: 'Vidaloka', serif;
+  text-transform: capitalize;
+
+  @media (max-width: 768px) {
+    font-size: 80px;
+    line-height: 85px;
+  }
+}
+
+.top_mask_add{
+  position: relative;
+  &::before{
+    content: '';
+    -webkit-mask: url("../images/mask/mask-top-add-alt.png") top left no-repeat;
+    -webkit-mask-size: cover !important;
+    z-index: 4;
+    padding-bottom: 5.208%;
+    margin-bottom: -2px;
+    bottom: 100%;
+    top: auto;
+    background-color: $darkgreyColor;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.bottom_mask_add{
+  position: relative;
+  &::before{
+    content: '';
+    -webkit-mask: url("../images/mask/mask-bottom-add-alt.png") top left no-repeat;
+    -webkit-mask-size: cover !important;
+    z-index: 4;
+    padding-bottom: 5.208%;
+    margin-top: -2px;
+    top: 99.5%;
+    background-color: $darkgreyColor;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.top_mask_subtract{
+  position: relative;
+  &::before{
+    content: '';
+    -webkit-mask: url("../images/mask/mask-bottom-add-alt.png") top left no-repeat;
+    -webkit-mask-size: cover !important;
+    z-index: 4;
+    padding-bottom: 5.208%;
+    margin-bottom: -2px;
+    top: -2px;
+    background-color: $darkgreyColor;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.bottom_mask_subtract{
+  position: relative;
+  &::after{
+    content: '';
+    -webkit-mask: url("../images/mask/mask-top-add-alt.png") top left no-repeat;
+    -webkit-mask-size: cover !important;
+    z-index: 4;
+    padding-bottom: 5.208%;
+    margin-bottom: -2px;
+    bottom: 0;
+    background-color: $darkgreyColor;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+.entry-content{
+  .quote{
+    position: relative;
+    padding-right: 85px;
+    padding-left: 85px;
+    &::before{
+      content: '\f10d';
+      font-family: "FontAwesome";
+      color: $colorMain;
+      font-size: 27px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-style: initial;
+    }
+    &::after{
+      content: '\f10e';
+      font-family: "FontAwesome";
+      color: $colorMain;
+      font-size: 27px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-style: initial;
+    }
+
+    @media (max-width: 768px){
+      padding-left: 0;
+      padding-right: 0;
+      &::before, &::after{
+        content: none!important;
+      }
+    }
+  }
+}

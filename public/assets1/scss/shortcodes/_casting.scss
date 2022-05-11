@@ -1,0 +1,123 @@
+/* Casting */
+.casting{
+  .item-content{
+    position: relative;
+    border-top: 1px solid #313131;
+    border-bottom: 1px solid #313131;
+    padding-top: 60px;
+  }
+  .item-media{
+    height: 300px;
+    max-height: 300px;
+    flex-shrink: 0;
+    img{
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      border-radius: 0;
+    }
+  }
+  .title{
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .subtitle{
+    color: $colorMain;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 13px;
+  }
+  .social-icons{
+    position: absolute;
+    display: block;
+    width: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    a + a{
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+  .item-left{
+    .item-content{
+      padding-right: 90px;
+      padding-left: 0;
+      margin-left: 60px;
+    }
+    .social-icons{
+      right: 0;
+    }
+  }
+  .item-right{
+    flex-direction: row-reverse;
+    text-align: right;
+    .item-content{
+      padding-right: 0;
+      padding-left: 90px;
+      margin-right: 60px;
+    }
+    .social-icons{
+      left: 0;
+    }
+  }
+  .form-group{
+    margin-bottom: 20px;
+  }
+  form{
+    .checkboxs{
+      .form-group{
+        margin-bottom: 0;
+        & + .form-group{
+          margin-top: 5px!important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .item-left,
+    .item-right{
+      flex-direction: column;
+      .item-media{
+        max-height: none;
+        height: auto;
+      }
+      .item-content{
+        padding-top: 35px;
+        padding-bottom: 15px;
+        margin: 0;
+        border: none;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .item-left,
+    .item-right{
+      .item-content{
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+      }
+      .social-icons{
+        display: block;
+        justify-content: center;
+        transform: none;
+        position: inherit;
+        width: auto;
+        margin-bottom: 0;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .item-left,
+    .item-right{
+      .item-media{
+        min-height: 275px;
+      }
+      .item-content{
+        padding-top: 20px;
+      }
+    }
+  }
+}
