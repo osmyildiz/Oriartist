@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-    <title>Oriartist</title>
+    <title>ORIARTISTS</title>
     <meta charset="utf-8">
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

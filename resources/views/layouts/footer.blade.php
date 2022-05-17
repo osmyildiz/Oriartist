@@ -4,12 +4,21 @@
     //$contact=Contact::find(1);
 
 @endphp
-<footer  id="contacts" class="contacts-section  ds overflow-visible background-contact s-pt-70 s-pb-60 s-pt-md-95 s-pb-md-80 s-pt-xl-170 s-pb-xl-140 c-gutter-30">
+<footer  id="contacts" class="contacts-section  ds overflow-visible background-contact s-pt-70 s-pb-60 s-pt-md-95 s-pb-md-80 s-pt-xl-30 s-pb-xl-140 c-gutter-30">
 
     <div class="container">
+        <div class="row col-lg-3">
+            <a href="./" class="logo mb-2">
+                <img src="assets1/images/footer_logo.png" alt="img" >
+            </a>
+        </div>
         <div class="row">
+
             <div class="col-lg-5 col-xl-4 animate" data-animation="scaleAppear">
-                <span class="color-main fs-24 font-main text-uppercase">modelia</span>
+
+
+
+
                 <h2 class="mt-0 mb-40 contact-title text-uppercase">Contact us</h2>
                 <div class="media mb-20">
                     <h5 class="fs-20 mb-0 min-w-100">Phone:</h5>

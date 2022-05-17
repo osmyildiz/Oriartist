@@ -9,38 +9,61 @@
             <ul class="metismenu list-unstyled" id="side-menu">
 
                 <li>
-                    <a href="/admin-summary" class="waves-effect">
-                        <i class="bx bx-archive"></i>
-                        <span key="t-dashboards">Özet Bölümü</span>
+                    <a href="/admin" class="waves-effect">
+                        <i class="bx bx-home"></i>
+                        <span key="t-dashboards">HOME</span>
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="/admin-whoweare" class="waves-effect">
+                        <i class="bx bxs-user-detail"></i>
+                        <span key="t-dashboards">WHO WE ARE</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="/admin-photo-gallery" class="waves-effect">
+                    <a href="/admin-whatweofferclient" class="waves-effect">
+                        <i class="bx bxs-offer"></i>
+                        <span key="t-dashboards">WHAT WE OFFER (CLIENT)</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/admin-whatweofferartist" class="waves-effect">
+                        <i class="bx bxs-offer"></i>
+                        <span key="t-dashboards">WHAT WE OFFER (ARTIST)</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/admin-artist" class="waves-effect">
                         <i class="bx bxs-photo-album"></i>
-                        <span key="t-dashboards">Foto Galeri</span>
+                        <span key="t-dashboards">OUR ARTISTS</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="/admin-video-gallery" class="waves-effect">
-                        <i class="bx bx-video"></i>
-                        <span key="t-dashboards">Video Galleri</span>
-                    </a>
-
-                </li>
-
-                <li>
-                    <a href="/admin-sector" class="waves-effect">
-                        <i class="bx bxs-compass"></i>
-                        <span key="t-dashboards">Sektör Raporları</span>
+                    <a href="/admin-joinus" class="waves-effect">
+                        <i class="bx bxs-folder-plus"></i>
+                        <span key="t-dashboards">JOINUS</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="/admin-report/1" class="waves-effect">
-                        <i class="bx bxs-report"></i>
-                        <span key="t-dashboards">Önceki Şuralar</span>
+                    <a href="/admin-contact" class="waves-effect">
+                        <i class="bx bxs-contact"></i>
+                        <span key="t-dashboards">CONTACT</span>
+                    </a>
+
+                </li>
+
+
+                <li>
+                    <a href="/admin-bookartist" class="waves-effect">
+                        <i class="bx bxs-archive"></i>
+                        <span key="t-dashboards">BOOK ARTIST</span>
                     </a>
 
                 </li>

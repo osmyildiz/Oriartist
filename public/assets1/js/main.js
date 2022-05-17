@@ -8,24 +8,24 @@ var $window = $(window);
 //hidding menu elements that do not fit in menu width
 //processing center logo
 function menuHideExtraElements() {
-	
+
 	//cleaneng changed elements
 	$('.sf-more-li, .sf-logo-li').remove();
 	var windowWidth = $('body').innerWidth();
-	
+
 	$('.sf-menu').each(function(){
 		var $thisMenu = $(this);
 		var $menuWraper = $thisMenu.closest('.top-nav');
 		$menuWraper.attr('style', '');
 		if (windowWidth > 1199) {
-			//grab all main menu first level items 
+			//grab all main menu first level items
 			var $menuLis = $menuWraper.find('.sf-menu > li');
 			$menuLis.removeClass('sf-xl-hidden');
 
 			var $headerLogoCenter = $thisMenu.closest('.header_logo_center');
 			var logoWidth = 0;
 			var summaryLiWidth = 0;
-			
+
 			if ( $headerLogoCenter.length ) {
 				var $logo = $headerLogoCenter.find('.logo');
 				// 30/2 - left and right margins
@@ -70,7 +70,7 @@ function menuHideExtraElements() {
 				var menuLeftOffset = liLeftRightDotX - logoLeftDotX;
 				$menuWraper.css({'left': -menuLeftOffset})
 			}
-			
+
 		}// > 991
 	}); //sf-menu each
 } //menuHideExtraElements
@@ -117,7 +117,7 @@ function initAffixSidebar() {
 	if ($affixAside.length) {
 
 			$window = $(window);
-		
+
 			//on stick and unstick event
 			$affixAside.on('affix.bs.affix', function(e) {
 				var affixWidth = $affixAside.width() - 1;
@@ -180,7 +180,7 @@ function initAffixSidebar() {
 
 				$affixAside.data('bs.affix').options.offset.top = offsetTop - offsetTopAdd;
 				$affixAside.data('bs.affix').options.offset.bottom = offsetBottom + offsetBottomAdd;
-				
+
 				$affixAside.affix('checkPosition');
 
 			});
@@ -1141,9 +1141,9 @@ function windowLoadInit() {
 
 			$currentSlider.flexslider({
 				animation: "fade",
-				pauseOnHover: true, 
+				pauseOnHover: true,
 				useCSS: true,
-				controlNav: dots,   
+				controlNav: dots,
 				directionNav: nav,
 				prevText: "",
 				nextText: "",
@@ -1186,14 +1186,14 @@ function windowLoadInit() {
 
 		$(".flexslider").each(function(index){
 			var $currentSlider = $(this);
-			//exit if intro slider already activated 
+			//exit if intro slider already activated
 			if ($currentSlider.find('.flex-active-slide').length) {
 				return;
 			}
 			$currentSlider.flexslider({
 				animation: "fade",
 				useCSS: true,
-				controlNav: true,   
+				controlNav: true,
 				directionNav: false,
 				prevText: "",
 				nextText: "",
@@ -1244,7 +1244,7 @@ function windowLoadInit() {
 					var filterValue = $( this ).attr('data-filter');
 					$(this).siblings().removeClass('selected active');
 					$(this).addClass('selected active');
-					
+
 					//removing old items
 					for (var i = $carousel.find('.owl-item').length - 1; i >= 0; i--) {
 						$carousel.trigger('remove.owl.carousel', [1]);
@@ -1256,7 +1256,7 @@ function windowLoadInit() {
 						$carousel.trigger('add.owl.carousel', $(this));
 						$(this).addClass('scaleAppear');
 					});
-					
+
 					$carousel.trigger('refresh.owl.carousel');
 
 					//reinit prettyPhoto in filtered OWL carousel
@@ -1267,7 +1267,7 @@ function windowLoadInit() {
 						});
 					}
 				});
-				
+
 			} //filters
 
 			$carousel.owlCarousel({
@@ -1319,7 +1319,7 @@ function windowLoadInit() {
 
 
 	} //eof owl-carousel
-	
+
 	// Custom nav of owl carousel
 	var $carouseSection = $('.carousel-section-alt');
     $carouseSection.find('.owl-custom-nav .owl-prev').on('click', function () {
@@ -1459,7 +1459,7 @@ function windowLoadInit() {
 		if ($().countTo) {
 			var $counter = $('.counter');
 			$counter.appear();
-			
+
 			$counter.filter(':appeared').each(function(){
 				initCounter($(this));
 			});
@@ -1469,7 +1469,7 @@ function windowLoadInit() {
 				});
 			});
 		}
-	
+
 		//bootstrap animated progressbar
 		if ($().progressbar) {
 			var $progressbar = $('.progress .progress-bar');
@@ -2034,7 +2034,7 @@ $window.on('resize', function(){
 			$(".page_header_wrapper").css({height: $header.first().outerHeight()});
 		}
 	}
-	
+
 });
 //end of IIFE function
 })(jQuery);
