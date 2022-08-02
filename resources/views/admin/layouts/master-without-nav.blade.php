@@ -4,15 +4,17 @@
     <head>
         <meta charset="utf-8" />
 
-        <title>Adventures Admin Panel</title>
+        <title> ORIARTISTS Admin Panel</title>
+        <link rel="icon" type="image/x-icon" href="assets1/images/ico.png"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta content="Adventures Investment" name="description" />
-        <meta content="Adventures, Investment, Mobility, Fintech, Technology" name="author" />
+        <meta content="Oriartists" name="description" />
+        <meta content="Oriartists" name="author" />
+
         <!-- App favicon -->
-        <link rel="shortcut icon" href="/img/ico.png">
+
         @include('admin.layouts.head-css')
   </head>
 

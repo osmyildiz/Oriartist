@@ -5,14 +5,25 @@
     <meta charset="utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title> @yield('title') | ORIARTISTS Admin Panel</title>
+    <title> @yield('title') ORIARTISTS Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="assets1/images/ico.png"/>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Adventures Investment" name="description" />
-    <meta content="Adventures" name="author" />
+    <meta content="Best entertainment in London,
+The best Singers in London,
+Entertainment for private events ,
+Luxury entertainment,
+Music for high end events,
+West end performers,
+Book a singer for a party,
+Bespoke Entertainment London
+" name="description" />
+    <meta content="Oriartists" name="keywords" />
+    <meta content="Oriartists" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="/img/ico.png">
+
+
     @include('admin.layouts.head-css')
 </head>
 @section('body')

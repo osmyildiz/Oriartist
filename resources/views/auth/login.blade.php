@@ -43,11 +43,10 @@
                                             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                                                 @csrf
                                                 <div class="mb-3">
-                                                    <label for="username" class="form-label">Email</label>
                                                     <input name="email" type="email"
                                                         class="form-control @error('email') is-invalid @enderror"
                                                         value="{{ old('email') }}" id="username"
-                                                        placeholder="E-Posta" autocomplete="email" autofocus>
+                                                        placeholder="Email" autocomplete="email" autofocus>
                                                     @error('email')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -57,12 +56,12 @@
 
                                                 <div class="mb-3">
 
-                                                    <label class="form-label">Password</label>
+
                                                     <div
                                                         class="input-group auth-pass-inputgroup @error('password') is-invalid @enderror">
                                                         <input type="password" name="password"
                                                             class="form-control  @error('password') is-invalid @enderror"
-                                                            id="userpassword" value="" placeholder="Şifre"
+                                                            id="userpassword" value="" placeholder="Password"
                                                             aria-label="Password" aria-describedby="password-addon">
                                                         <button class="btn btn-light " type="button" id="password-addon"><i
                                                                 class="mdi mdi-eye-outline"></i></button>
@@ -78,7 +77,7 @@
 
                                                 <div class="mt-3 d-grid">
                                                     <button class="btn btn-warning waves-effect waves-light"
-                                                        type="submit">Giriş</button>
+                                                        type="submit">LOGIN</button>
                                                 </div>
 
 

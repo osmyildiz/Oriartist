@@ -8,8 +8,8 @@
         <div class="container">
             <div class="row">
 
-                <div class="fw-divider-space hidden-below-lg mt-160"></div>
-                <div class="fw-divider-space hidden-above-lg mt-100"></div>
+                <div class="fw-divider-space hidden-below-lg mt-50"></div>
+
 
                 <div class="col-md-12 text-center">
                     <h1>What We Offer</h1>
@@ -23,60 +23,111 @@
                     </ol>
                 </div>
 
-                <div class="fw-divider-space hidden-below-lg mt-160"></div>
-                <div class="fw-divider-space hidden-above-lg mt-100"></div>
+                <div class="fw-divider-space hidden-below-lg mt-50"></div>
+
 
             </div>
         </div>
     </section>
-    <section class="ds">
+    <section class="ds single-model s-pt-70 s-pb-40 s-pb-sm-70 s-py-lg-100 s-py-xl-10 c-mb-30 c-gutter-50 ">
         <div class="container">
-            <div class="row">
-                <article class="text-left vertical-item post type-post status-publish format-standard content-padding border-rad-5">
-                    <div class="item-content">
+            <div class="row mt-5">
 
-                        <div class="entry-content">
-                            <h3 class="entry-title">
-                                <a href="blog-single-full.html" rel="bookmark">
-                                    Header Title
-                                </a>
-                            </h3>
-                            <p>Ridens nostrud delenit duo ea, sed mutat graecis cu, fuisset dolores intellegebat mei ei. Vitae alienum eu mea, lorem tollit et nam. Sea eu lorem integre, sea ei libris aliquid has signiferumque.</p>
-                        </div><!-- .entry-content -->
+                <div class="col-lg-4">
 
-                    </div><!-- .item-content -->
-                    <div class="fw-divider-space hidden-above-lg mt-100"></div>
-                </article><!-- #post-## -->
+                    <h3>Our Services</h3>
+
+                    <ul class="list1">
+
+                        @foreach($services as $service)
+                            <li>
+                                <p>{{$service->name}}</p>
+                            </li>
+                        @endforeach
+
+
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-8 content-padding border-rad-5">
+
+                    <div class="item-content ds">
+                        <h3>{{$content->title}}</h3>
+
+                        <p>
+                            {{$content->paragraph1}}
+                        </p>
+                        <p>
+                            {{$content->paragraph2}}
+                        </p>
+                        <p>
+                            {{$content->paragraph3}}
+                        </p>
+
+
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <h4>{{$content->title2}}</h4>
+                                <ul class="list1">
+                                    @for($i=1;$i<4;$i++)
+                                        @php
+                                        $item = 'item'.$i;
+                                        @endphp
+
+                                        @if($content->$item !="")
+                                            <li>
+                                                {{$content->$item}}
+                                            </li>
+                                        @endif
+                                    @endfor
+
+                                </ul>
+                            </div>
+                        </div> <!-- .row -->
+                    </div>
+
+
+                </div><!-- .col-* -->
 
             </div>
+        </div>
+    </section>
+
+    <!--<section class="ds">
+        <div class="container">
+
             <div class="row mt-5">
+
 
                 <div class="col-xs-12 col-lg-4">
 
                     <div class="pricing-plan">
                         <div class="plan-name bg-maincolor">
                             <h3>
-                                Impetus Amet
+                                {{$packages[0]->name}}
                             </h3>
                         </div>
-                        <div class="price-wrap color-darkgrey">
-                            <span class="plan-sign">$</span>
-                            <span class="plan-price">100</span>
-                            <span class="plan-decimals">.00</span>
-                        </div>
                         <div class="plan-description small-text color-darkgrey">
-                            Quando theophrastus
+                            {{$packages[0]->top_text}}
                         </div>
+
                         <div class="plan-features">
                             <ul class="list-bordered">
-                                <li>Mediocritatem</li>
-                                <li>Liber Democritum</li>
-                                <li>Liber Democritum</li>
-                                <li>Monesarchum</li>
+                                @foreach($item1 as $it)
+                                    @if(!empty($it->name))
+                                        <li>{{$it->name}}</li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
+                        <div class="plan-description-bottom color-darkgrey">
+                            {{$packages[0]->bottom_text}}
+                        </div>
                         <div class="plan-button">
-                            <a href="#" class="btn btn-maincolor">order now</a>
+                            <a href="/contact" class="btn btn-maincolor">order now</a>
                         </div>
                     </div>
 
@@ -88,28 +139,27 @@
                     <div class="pricing-plan plan-featured">
                         <div class="plan-name bg-maincolor">
                             <h3>
-                                Bonorun Has
+                                {{$packages[1]->name}}
                             </h3>
                         </div>
-                        <div class="price-wrap color-darkgrey">
-                            <span class="plan-sign">$</span>
-                            <span class="plan-price">250</span>
-                            <span class="plan-decimals">.00</span>
-                        </div>
+
                         <div class="plan-description small-text color-darkgrey">
-                            mentitum mediocrem
+                            {{$packages[1]->top_text}}
                         </div>
                         <div class="plan-features">
                             <ul class="list-bordered">
-                                <li>Dicam Concludaturque</li>
-                                <li>Homero Impetus</li>
-                                <li>Conclusionemque</li>
-                                <li>Vivendo Definiebas</li>
-                                <li>Apeirian Electram</li>
+                                @foreach($item2 as $it)
+                                    @if(!empty($it->name))
+                                        <li>{{$it->name}}</li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
+                        <div class="plan-description-bottom color-darkgrey">
+                            {{$packages[1]->bottom_text}}
+                        </div>
                         <div class="plan-button">
-                            <a href="#" class="btn btn-maincolor">order now</a>
+                            <a href="/contact" class="btn btn-maincolor">order now</a>
                         </div>
                     </div>
 
@@ -120,27 +170,26 @@
                     <div class="pricing-plan">
                         <div class="plan-name bg-maincolor">
                             <h3>
-                                Denique Noluisse
+                                {{$packages[2]->name}}
                             </h3>
                         </div>
-                        <div class="price-wrap color-darkgrey">
-                            <span class="plan-sign">$</span>
-                            <span class="plan-price">175</span>
-                            <span class="plan-decimals">.00</span>
-                        </div>
                         <div class="plan-description small-text color-darkgrey">
-                            Lucilius petentium
+                            {{$packages[2]->top_text}}
                         </div>
                         <div class="plan-features">
                             <ul class="list-bordered">
-                                <li>Disputando Cum</li>
-                                <li>Delicatissimi Amet</li>
-                                <li>Ludus Repudiandae</li>
-                                <li>Fabellas Salutandi</li>
+                                @foreach($item3 as $it)
+                                    @if(!empty($it->name))
+                                    <li>{{$it->name}}</li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
+                        <div class="plan-description-bottom color-darkgrey">
+                            {{$packages[2]->bottom_text}}
+                        </div>
                         <div class="plan-button">
-                            <a href="#" class="btn btn-maincolor">order now</a>
+                            <a href="/contact" class="btn btn-maincolor">order now</a>
                         </div>
                     </div>
 
@@ -149,6 +198,19 @@
 
             </div>
         </div>
+        <div class="fw-divider-space hidden-below-lg mt-70"></div>
+        <div class="fw-divider-space hidden-xs hidden-above-lg mt-40"></div>
+    </section>-->
+
+    <section class="page_title">
+        <div class="row justify-content-center mt-5">
+            <div class="col-xs-12 col-lg-8 text-center">
+                <h4 class="title">{{$content->quote}}</h4>
+
+
+            </div>
+        </div>
+
         <div class="fw-divider-space hidden-below-lg mt-70"></div>
         <div class="fw-divider-space hidden-xs hidden-above-lg mt-40"></div>
     </section>

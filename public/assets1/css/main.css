@@ -8170,6 +8170,10 @@ py-* - same value for top and for bottom padding
 		padding-bottom: 100px;
 		padding-top: 100px;
 	}
+    .s-py-lg-our > [class*='container'] {
+        padding-bottom: 0px;
+        padding-top: 100px;
+    }
 
 	.s-py-lg-110 > [class*='container'] {
 		padding-bottom: 110px;
@@ -10811,7 +10815,7 @@ section.carousel-section .item-gallery {
 }
 
 .hello-section {
-	background: url("../images/girl6.jpg") no-repeat center/cover;
+	background: url("../images/girl_2.jpg") no-repeat center/cover;
 }
 
 .hello-section p.color-white {
@@ -16186,6 +16190,9 @@ h3.small {
 .pricing-plan .price-wrap .plan-price {
 	font-size: 50px;
 }
+.plan-price1 {
+    font-size: 20px;
+}
 
 .pricing-plan [class*='bg-'] {
 	margin-left: -41px;
@@ -16205,10 +16212,17 @@ h3.small {
 
 .pricing-plan .plan-description {
 	font-family: "Vidaloka", serif;
-	font-size: 12px;
-	letter-spacing: 4px;
-	line-height: 1;
-	text-transform: uppercase;
+	font-size: 18px;
+	line-height: 30px;
+    padding-top: 30px;
+
+}
+.plan-description-bottom {
+    font-family: "Vidaloka", serif;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 30px;
+
 }
 
 .pricing-plan .plan-decimals {
@@ -16480,7 +16494,7 @@ filters
 /* Model single page */
 .single-model .model {
 	background: #000;
-	padding-bottom: 60px;
+
 }
 
 .single-model .model-slider-thumbs {
@@ -22890,6 +22904,7 @@ body.active-side-header.slide-right .page_header_side {
 
 .page_slider video {
 	min-width: 100%;
+	max-width: 100%;
 }
 
 .page_slider .flex-bg {
@@ -23143,7 +23158,7 @@ body.active-side-header.slide-right .page_header_side {
 @media (max-width: 768px) {
 	.page_slider .flexslider li.cover-image {
 		background-position: 50% 50%;
-		bottom: 0;
+		bottom: 100px;
 		display: block;
 		left: 0;
 		position: absolute;
@@ -25179,7 +25194,7 @@ img.absolute_image {
 	opacity: 1;
 	position: absolute;
 	text-transform: uppercase;
-	top: -29px;
+	top: -37px;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	z-index: 5;
@@ -25187,14 +25202,15 @@ img.absolute_image {
 
 .item-gallery .item-content .item-title .title {
 	color: #fff;
-	font-size: 40px;
+	font-size: 32px;
 	letter-spacing: 1px;
+    width: 300px;
 }
 
 .item-gallery .item-content .item-title .subtitle {
 	color: #000;
 	font-size: 24px;
-	margin-top: -6px;
+	margin-top: 5px;
 }
 
 .item-gallery .item-content .model-data {

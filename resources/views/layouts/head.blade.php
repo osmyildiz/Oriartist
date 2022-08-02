@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="assets1/images/ico.png"/>
 <link rel="stylesheet" href="{{asset('assets1/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('assets1/css/animations.css')}}">
 <link rel="stylesheet" href="{{asset('assets1/css/font-awesome.css')}}">
@@ -12,5 +13,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+
 
 

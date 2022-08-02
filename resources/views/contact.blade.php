@@ -8,8 +8,8 @@
         <div class="container">
             <div class="row">
 
-                <div class="fw-divider-space hidden-below-lg mt-160"></div>
-                <div class="fw-divider-space hidden-above-lg mt-100"></div>
+                <div class="fw-divider-space hidden-below-lg mt-50"></div>
+
 
                 <div class="col-md-12 text-center">
                     <h1>Contact Us</h1>
@@ -23,8 +23,7 @@
                     </ol>
                 </div>
 
-                <div class="fw-divider-space hidden-below-lg mt-160"></div>
-                <div class="fw-divider-space hidden-above-lg mt-100"></div>
+                <div class="fw-divider-space hidden-below-lg mt-50"></div>
 
             </div>
         </div>
@@ -41,8 +40,8 @@
                             <i class="fa fa-phone"></i>
                         </div>
                         <p>
-                            <strong>Phone:</strong> +12 345 678 9123<br>
-                            <strong>Fax:</strong> +12 345 678 9123
+                            <strong>Phone:</strong> {{$contact->phone}}<br>
+
                         </p>
                     </div>
                 </div>
@@ -52,9 +51,7 @@
                             <i class="fa fa-map-marker"></i>
                         </div>
                         <p>
-                            PO Box 54378<br>
-                            4321 Your Address,<br>
-                            Your City, Your Country
+                            {{$contact->address}}
                         </p>
                     </div>
                 </div>
@@ -64,14 +61,36 @@
                             <i class="fa fa-envelope-o"></i>
                         </div>
                         <p>
-                            <a href="mailto:info@example.com">info@example.com</a>
+                            <a href="mailto:{{$contact->email}}">{{$contact->email}}</a>
+                            <br>
+
+                            <a href="mailto:{{$contact->email}}">{{$contact->email2}}</a>
+                        <br>
+                            <a href="mailto:{{$contact->email}}">{{$contact->email3}}</a>
                         </p>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="divider-20 d-none d-xl-block"></div>
+
+                <div class="col-12 text-center animate" data-animation="fadeInUp">
+
+                    <div class="widget widget_social_buttons">
+                        <a href="{{$contact->facebook}}" target="_blank" class="fa fa-facebook color-bg-icon rounded" title="facebook"></a>
+                        <a href="{{$contact->twitter}}" target="_blank"  class="fa fa-twitter color-bg-icon rounded" title="twitter"></a>
+                        <a href="{{$contact->instagram}}" target="_blank"  class="fa fa-instagram color-bg-icon rounded" title="instagram"></a>
+                        <a href="{{$contact->youtube}}" target="_blank"  class="fa fa-youtube-play color-bg-icon rounded" title="youtube"></a>
+                    </div>
+
+
+
+                </div>
+
+            </div>
             <div class="fw-divider-space hidden-below-lg mt-40"></div>
             <div class="fw-divider-space hidden-above-lg mt-20"></div>
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-12 animate" data-animation="scaleAppear">
                     <form class="contact-form c-mb-20 c-gutter-20" method="post" action="/">
                         <div class="row">
@@ -109,9 +128,9 @@
                         </div>
                     </form>
                 </div>
-                <!--.col-* -->
 
-            </div>
+
+            </div>-->
             <div class="fw-divider-space hidden-below-lg mt-50"></div>
             <div class="fw-divider-space hidden-xs hidden-above-lg mt-20"></div>
         </div>

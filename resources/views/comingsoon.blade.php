@@ -23,7 +23,7 @@
                     </h2>
                     <p>Stay Tuned!</p>
 
-                    <div id="comingsoon-countdown" data-date="May 29, 2022 10:00:00"></div>
+                    <div id="comingsoon-countdown" data-date="Aug 5, 2022 10:00:00"></div>
                     <!--
             use "data-date" attribute with your date value to set date that you need to count to
             <div id="comingsoon-countdown" data-date="March 29, 2018 10:00:00"></div>

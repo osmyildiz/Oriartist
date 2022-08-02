@@ -3,24 +3,28 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
+
+
                 <a href="/" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="32">
+                        <img src="{{asset("assets1/images/footer_logo.png")}}" alt="" width="132">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="64">
+                        <img src="{{asset("assets1/images/footer_logo.png")}}" alt="" width="164">
                     </span>
                 </a>
 
                 <a href="/" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="32">
+                        <img src="{{asset("assets1/images/footer_logo.png")}}" alt="" width="132">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="64">
+                        <img src="{{asset("assets1/images/footer_logo.png")}}" alt="" width="164">
                     </span>
                 </a>
+
             </div>
+
 
 
 

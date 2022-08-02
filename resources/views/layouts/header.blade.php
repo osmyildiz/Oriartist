@@ -10,8 +10,8 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-xl-3 mt-2 mb-2">
-                    <a href="./" class="logo">
-                        <img src="assets1/images/logo.png" alt="img">
+                    <a href="/" class="logo">
+                        <img src="{{asset('assets1/images/logo.png')}}" alt="img">
                     </a>
                 </div>
                 <div class="col-xl-9 ">
@@ -19,13 +19,11 @@
                         <!-- main nav start -->
                         <nav class="top-nav justify-content-end">
                             <ul class="nav sf-menu">
-                                <li >
-                                    <a href="/who-we-are">WHO WE ARE</a>
-                                </li>
+                                <li ><a href="/ori-artist-mentoring">ORI ARTIST <span class="color-main">MENTORING</span> </a></li>
                                 <!-- blog -->
                                 <li>
 
-                                    <a href="#">WHAT WE OFFER</a>
+                                    <a>WHAT WE OFFER</a>
                                     <ul>
                                         <li>
                                             <a href="/what-we-offer-client">Client</a>
@@ -38,21 +36,21 @@
                                 </li>
                                 <!-- eof blog -->
                                 <li>
-                                    <a href="/our-artists">OUR ARTISTS</a>
+                                    <a href="/book-ori-artists"><span class="color-main">BOOK</span> ORI ARTISTS</a>
                                 </li>
                                 <!-- eof features -->
                                 <li>
-                                    <a href="/join-us">JOIN US</a>
+                                    <a href="/become-an-oriartist"><span class="color-main">BECOME</span> AN ORI ARTISTS</a>
                                 </li><!-- eof pages -->
                                 <!-- gallery -->
                                 <li>
                                     <a href="/contact">CONTACTS</a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a class="borders1" href="/book-artist" style="color: coral">BOOK ARTIST</a>
 
 
-                                </li>
+                                </li>-->
                             </ul>
                         </nav>
                         <!-- eof main nav -->

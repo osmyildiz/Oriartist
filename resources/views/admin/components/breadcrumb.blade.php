@@ -6,7 +6,12 @@
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">{{ $li_1 }}</a></li>
+                    @if(isset($route))
+                        <li class="breadcrumb-item"><a href="/{{$route}}">{{ $li_1 }}</a></li>
+                    @else
+                        <li class="breadcrumb-item"><a href="/">{{ $li_1 }}</a></li>
+                    @endif
+
                     @if(isset($title))
                         <li class="breadcrumb-item active">{{ $title }}</li>
                     @endif

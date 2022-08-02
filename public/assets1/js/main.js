@@ -1958,6 +1958,18 @@ $window.on('resize', function(){
 	$body.scrollspy('refresh');
 
     //Video
+    function getElementsByIdStartsWith(container, selectorTag, prefix) {
+        var items = [];
+        var myPosts = document.getElementById(container).getElementsByTagName(selectorTag);
+        for (var i = 0; i < myPosts.length; i++) {
+            //omitting undefined null check for brevity
+            if (myPosts[i].id.lastIndexOf(prefix, 0) === 0) {
+                items.push(myPosts[i]);
+            }
+        }
+        return items;
+    }
+
 
     if ( document.getElementById('myVideo') ) {
         var $videobg = document.getElementById('myVideo');
