@@ -48,7 +48,7 @@
                             <li class="ds cover-image video-bg text-center" style="height: 400px" >
                                 <img src="{{$sliders[1]->url}}" class="" alt="img">
                                 <div class="flex-bg ds s-overlay">
-                                    <video muted loop id="myVideo">
+                                    <video muted loop id="myVideo{{$key}}">
                                         <source  data-src="{{$slider->url}}" data-time="30" type="video/mp4">
                                     </video>
                                 </div>

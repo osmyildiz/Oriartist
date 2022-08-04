@@ -680,6 +680,8 @@ class AdminController extends Controller
         if($request->hasFile('cover_img')){
             $id = mt_rand(1000, 9999);
             $imageName = $id."_".time().'.'.$request->cover_img->extension();
+            //$img = $request->cover_img->resize(500, null, function ($constraint) { $constraint->aspectRatio(); });
+            //$img->move(public_path("/assets1/images/"), $imageName);
             $request->cover_img->move(public_path("/assets1/images/"), $imageName);
             $record->cover_img = "/assets1/images/".$imageName;
         }

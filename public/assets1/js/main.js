@@ -1721,8 +1721,8 @@ function windowLoadInit() {
         //Video
 
         function videoAutoPlay() {
-            if ( document.getElementById('myVideo') ) {
-                var $videobg = document.getElementById('myVideo');
+            if ( document.getElementById('myVideo0') ) {
+                var $videobg = document.getElementById('myVideo0');
 
                 var $src = $videobg.querySelector('source').dataset.src;
                 var $time = $videobg.querySelector('source').dataset.time;
@@ -1763,8 +1763,8 @@ function windowLoadInit() {
             }
         }
 
-		if ( document.getElementById('myVideo') ) {
-			var $videobg = document.getElementById('myVideo');
+		if ( document.getElementById('myVideo0') ) {
+			var $videobg = document.getElementById('myVideo0');
 
             var $src = $videobg.querySelector('source').dataset.src;
             var $time = $videobg.querySelector('source').dataset.time;
@@ -1803,6 +1803,90 @@ function windowLoadInit() {
                 }
 			});
 		}
+
+    function videoAutoPlay() {
+        if ( document.getElementById('myVideo1') ) {
+            var $videobg = document.getElementById('myVideo1');
+
+            var $src = $videobg.querySelector('source').dataset.src;
+            var $time = $videobg.querySelector('source').dataset.time;
+
+            if ( $(window).width() > 1200 ) {
+                if ( $videobg.paused ){
+                    $videobg.querySelector('source').src = $src;
+                    $videobg.load();
+                    $videobg.currentTime = 0;
+                    $videobg.volume = 0;
+                    $videobg.play();
+
+                    $videobg.addEventListener('timeupdate', function () {
+                        if ( this.currentTime >= $time ) {
+                            $videobg.currentTime = 0;
+                            $videobg.volume = 0;
+                            $videobg.play();
+                        }
+                    });
+                }
+
+            }
+
+            $('.slides').on('classChanged','li:first', function () {
+                if ( $(window).width() > 1200 ) {
+                    $videobg.currentTime = 0;
+                    $videobg.volume = 0;
+                    $videobg.play();
+                    $videobg.addEventListener('timeupdate', function () {
+                        if ( this.currentTime >= 26 ) {
+                            $videobg.currentTime = 0;
+                            $videobg.volume = 0;
+                            $videobg.play();
+                        }
+                    })
+                }
+            });
+        }
+    }
+
+    if ( document.getElementById('myVideo1') ) {
+        var $videobg = document.getElementById('myVideo1');
+
+        var $src = $videobg.querySelector('source').dataset.src;
+        var $time = $videobg.querySelector('source').dataset.time;
+
+        if ( $(window).width() > 1200 ) {
+            if ( $videobg.paused ){
+                $videobg.querySelector('source').src = $src;
+                $videobg.load();
+                $videobg.currentTime = 0;
+                $videobg.volume = 0;
+                $videobg.play();
+
+                $videobg.addEventListener('timeupdate', function () {
+                    if ( this.currentTime >= $time ) {
+                        $videobg.currentTime = 0;
+                        $videobg.volume = 0;
+                        $videobg.play();
+                    }
+                });
+            }
+
+        }
+
+        $('.slides').on('classChanged','li:first', function () {
+            if ( $(window).width() > 1200 ) {
+                $videobg.currentTime = 0;
+                $videobg.volume = 0;
+                $videobg.play();
+                $videobg.addEventListener('timeupdate', function () {
+                    if ( this.currentTime >= 26 ) {
+                        $videobg.currentTime = 0;
+                        $videobg.volume = 0;
+                        $videobg.play();
+                    }
+                })
+            }
+        });
+    }
 
 		(function () {
 			var originalAddClassMethod = jQuery.fn.addClass;
@@ -1971,8 +2055,8 @@ $window.on('resize', function(){
     }
 
 
-    if ( document.getElementById('myVideo') ) {
-        var $videobg = document.getElementById('myVideo');
+    if ( document.getElementById('myVideo0') ) {
+        var $videobg = document.getElementById('myVideo0');
 
         var $src = $videobg.querySelector('source').dataset.src;
         var $time = $videobg.querySelector('source').dataset.time;
