@@ -23003,7 +23003,7 @@ body.active-side-header.slide-right .page_header_side {
 
 @media (max-width: 768px) {
 	.page_slider .soc-buttons {
-		bottom: 60px;
+		bottom: 13px;
 		left: 50%;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
@@ -23119,7 +23119,7 @@ body.active-side-header.slide-right .page_header_side {
 
 @media (max-width: 768px) {
 	.page_slider .flex-direction-nav {
-		bottom: 39px;
+		bottom: 2px;
 		right: 50%;
 		-webkit-transform: translateX(50%);
 		transform: translateX(50%);
@@ -23325,7 +23325,7 @@ body.active-side-header.slide-right .page_header_side {
 		line-height: 1.3;
 		margin: 0;
 		text-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
-		white-space: nowrap;
+
 	}
 
 	.page_slider .intro_after_featured_word a {
@@ -23375,6 +23375,7 @@ body.active-side-header.slide-right .page_header_side {
 
 	.page_slider .intro_featured_word {
 		font-size: 85px;
+
 	}
 
 	.page_slider .intro_after_featured_word {

@@ -28,7 +28,7 @@
 
                                                     <div class="intro_layer" data-animation="fadeInRight">
                                                         <div class="d-inline-block">
-                                                            <h2 class="text-uppercase intro_featured_word"> {{$slider->uptitle}}</h2>
+                                                            <h2 class="text-uppercase intro_featured_word justify-content-center align-items-center text-center"> {{$slider->uptitle}}</h2>
                                                         </div>
                                                     </div>
                                                     <div class="intro_layer mt-30" data-animation="fadeInUp">
@@ -66,7 +66,7 @@
                                                 <div class="intro_layers">
                                                     <div class="intro_layer" data-animation="fadeInRight">
                                                         <div class="d-inline-block">
-                                                            <h2 class="text-uppercase intro_featured_word">{{$slider->uptitle}}</h2>
+                                                            <h2 class="text-uppercase intro_featured_word ">{{$slider->uptitle}}</h2>
                                                         </div>
                                                     </div>
                                                     <div class="intro_layer mt-30" data-animation="fadeInUp">
