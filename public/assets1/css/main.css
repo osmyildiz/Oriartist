@@ -10901,9 +10901,18 @@ section.carousel-section .item-gallery {
 	padding-left: 60px;
 	padding-right: 60px;
 }
+.gallery-section1 {
+    background-color: #1a1a1a;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
 
 .gallery-section.bottom_mask_add::before {
 	top: 100%;
+}
+.gallery-section1.bottom_mask_add::before {
+    top: 100%;
 }
 
 @media (max-width: 768px) {
@@ -10911,6 +10920,10 @@ section.carousel-section .item-gallery {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+    .gallery-section1 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .blockquote-section.about-section {

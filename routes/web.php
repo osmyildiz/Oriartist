@@ -24,6 +24,7 @@ Route::get('/ori-artist-mentoring', [App\Http\Controllers\HomeController::class,
 Route::get('/what-we-offer-client', [App\Http\Controllers\HomeController::class, 'whatweofferclient'])->name('whatweofferclient');
 Route::get('/what-we-offer-artist', [App\Http\Controllers\HomeController::class, 'whatweofferartist'])->name('whatweofferartist');
 Route::get('/book-ori-artists', [App\Http\Controllers\HomeController::class, 'bookoriartists'])->name('bookoriartists');
+Route::get('/book-ori-artists-all', [App\Http\Controllers\HomeController::class, 'bookoriartistsall'])->name('bookoriartists1');
 Route::get('/become-an-oriartist', [App\Http\Controllers\HomeController::class, 'becomeanoriartist'])->name('becomeanoriartist');
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('/book-artist', [App\Http\Controllers\HomeController::class, 'bookartist'])->name('bookartist');

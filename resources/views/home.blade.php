@@ -311,7 +311,7 @@
         <div class="fw-divider-space hidden-below-md pt-50"></div>
     </section>
 
-    <section id="gallery" class="gallery-section gallery-6  overflow-visible ds s-pt-115 s-pb-70 s-pb-md-80 s-pt-md-135 s-pb-xl-155 s-pt-xl-120">
+    <section id="gallery" class="gallery-section1 gallery-6  overflow-visible ds s-pt-115 s-pb-70 s-pb-md-80 s-pt-md-135 s-pb-xl-155 s-pt-xl-120">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 mb-5">
@@ -321,10 +321,10 @@
                 <div class="col-lg-12">
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-xl-12">
-                            <div class="filters gallery-filters text-lg-right">
+                            <div class="filters gallery-section text-lg-right">
                                 <a href="#" data-filter="*" class="active selected ">All</a>
                                 @foreach($categories as $category)
-                                <a href="#" data-filter="{{$category->alias}}">{{$category->name}}</a>
+                                <a href="/book-ori-artists-all" data-filter="{{$category->alias}}">{{$category->name}}</a>
                                 @endforeach
                             </div>
                         </div>

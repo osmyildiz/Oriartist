@@ -233,7 +233,47 @@ class HomeController extends Controller
             ->join('categories', 'categories.id', '=', 'fields.category_id')
             ->get();
 
-        return view('bookoriartists',compact('artists','fields','categories','record'));
+        $scroll = False;
+
+        return view('bookoriartists',compact('artists','fields','categories','record','scroll'));
+
+    }
+    public function bookoriartistsall()
+    {
+        $content = $record = Bookoriartistpage::find(1);
+        $keywords = explode(',', $record->meta_keywords);
+
+
+        SEOMeta::setTitle($content->meta_title,false);
+        SEOMeta::setDescription($content->meta_description);
+        SEOMeta::setCanonical('https://oriartist.co.uk');
+
+        SEOMeta::setKeywords($keywords);
+        SEOMeta::addMeta('article:modified_time', date("Y-m-d H:i:s"), 'property');
+
+
+        OpenGraph::setDescription($content->meta_description);
+        OpenGraph::setTitle($content->title);
+        OpenGraph::setUrl('https://oriartist.co.uk');
+        OpenGraph::addProperty('type', 'articles');
+
+
+        TwitterCard::setTitle($content->meta_title);
+        TwitterCard::setSite('@oriartist');
+
+        JsonLd::setTitle($content->title);
+        JsonLd::setDescription($content->meta_description);
+        JsonLd::addImage('https://oriartists.co.uk/assets1/images/logo.png');
+
+
+        $artists = Artist::inRandomOrder()->where('is_active',1)->orderBy('priority','ASC')->get();
+        $categories = Category::where('is_active',1)->orderBy('priority','ASC')->get();
+        $fields = Field::selectRaw('categories.alias,fields.artist_id')
+            ->join('categories', 'categories.id', '=', 'fields.category_id')
+            ->get();
+        $scroll =1;
+
+        return view('bookoriartists',compact('artists','fields','categories','record','scroll'));
 
     }
     public function artistsingle()

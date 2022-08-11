@@ -12,7 +12,7 @@
 
 
                 <div class="col-md-12 text-center">
-                    <h1>Our Artists</h1>
+                    <h1>Our Artists{{$scroll}}</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="./">Home</a>
@@ -67,7 +67,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 mb-5">
-                    <div class="row justify-content-center"><h3 class="textorange">OUR ARTISTS</h3></div>
+                    <div class="row justify-content-center artist" id="artist" ><h3 class="textorange">OUR ARTISTS</h3></div>
                 </div>
 
                 <div class="col-lg-12">
@@ -190,6 +190,16 @@
             </div>
         </div>
     </section>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            @if($scroll)
+            $('html, body').animate({
+                scrollTop: $('#artist').offset().top
+            }, 'slow');
+            @endif
+        });
+    </script>
 
 
 
